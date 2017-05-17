@@ -1,7 +1,18 @@
 module WaterBan
   module Api
-    class ApplicationController < WaterBan::ApplicationController
+    class ApplicationController < ActionController::API
+
       def index
+        puts 'xxx'
+        puts 'xxx'
+        puts 'xxx'
+        puts 'xxx'
+        puts 'xxx'
+        puts 'xxx'
+        puts 'xxx'
+        puts 'xxx'
+        puts 'xxx'
+        puts 'xxx'
         render nothing: true
       end
       # respond_to :json

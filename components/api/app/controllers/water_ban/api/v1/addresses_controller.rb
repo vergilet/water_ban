@@ -1,35 +1,15 @@
-class WaterBan::Api::V1::AddressesController < WaterBan::ApplicationController
-  def index
-    puts '123'
-    puts '123'
-    puts '123'
-    puts '123'
-    puts '123'
-    puts '123'
-    puts '123'
-    puts '123'
-    puts '123'
-    puts '123'
-    puts '123'
-    puts '123'
-    puts '123'
-    puts '123'
-    puts '123'
-    puts '123'
-    puts '123'
-    puts '123'
-    puts '123'
-    puts '123'
-    puts '123'
-    puts '123'
-    render nothing: true
-  end
+module WaterBan::Api::V1
+  class AddressesController < ApplicationController
+    def index
+      render json: {}
+    end
 
-  def show
-    render nothing: true
-  end
+    def show
+      render json: {}
+    end
 
-  def create
-    render nothing: true
+    def create
+      render json: {}
+    end
   end
 end
