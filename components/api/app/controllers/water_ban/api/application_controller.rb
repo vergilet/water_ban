@@ -1,3 +1,5 @@
+require 'responders'
+
 module WaterBan
   module Api
     class ApplicationController < ActionController::API

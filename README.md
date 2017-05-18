@@ -22,3 +22,10 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+psql water_ban_development
+
+
+drop extension pgcrypto;
+CREATE EXTENSION pgcrypto;

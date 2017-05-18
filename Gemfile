@@ -7,6 +7,7 @@ end
 
 gem 'water_ban_core', path: 'components/core'
 gem 'water_ban_api', path: 'components/api'
+gem 'water_ban_addresses', path: 'components/addresses'
 
 gem 'modular_engine'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -45,4 +46,4 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'responders'
+

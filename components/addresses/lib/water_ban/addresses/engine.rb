@@ -1,8 +1,8 @@
 module WaterBan
-  module Api
+  module Addresses
     class Engine < ::Rails::Engine
-      isolate_namespace WaterBan::Api
-      paths["app/views"] << "app/views/water_ban/api"
+      isolate_namespace WaterBan::Addresses
+      paths["app/views"] << "app/views/water_ban/addresses"
     
       initializer :append_migrations do |app|
         unless app.root.to_s.match(root.to_s)
@@ -17,7 +17,9 @@ module WaterBan
           Rails.configuration.cache_classes ? require(c) : load(c)
         end
       end
+    
     end
+  
   end
 end
 
