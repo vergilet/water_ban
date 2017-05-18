@@ -19,7 +19,6 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", "~> 5.1.1"
   s.add_dependency 'active_model_serializers', '~> 0.8.3'
-  s.add_dependency "responders"
-
-  s.add_dependency "deface"
+  s.add_dependency 'responders', '~> 2.1'
+  s.add_dependency 'deface'
 end

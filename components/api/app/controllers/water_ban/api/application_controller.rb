@@ -1,28 +1,12 @@
 module WaterBan
   module Api
     class ApplicationController < ActionController::API
+      respond_to :json
+      before_action :ensure_json_request
 
-      def index
-        puts 'xxx'
-        puts 'xxx'
-        puts 'xxx'
-        puts 'xxx'
-        puts 'xxx'
-        puts 'xxx'
-        puts 'xxx'
-        puts 'xxx'
-        puts 'xxx'
-        puts 'xxx'
-        render nothing: true
+      def ensure_json_request
+        render(nothing: true, status: 406) unless request.format == :json
       end
-      # respond_to :json
-      #
-      # before_action :ensure_json_request
-      #
-      # def ensure_json_request
-      #   return if request.format == :json
-      #   render :nothing => true, :status => 404
-      # end
     end
   end
 end

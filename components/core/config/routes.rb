@@ -1,3 +1,4 @@
 WaterBan::Core::Engine.routes.draw do
-  root to: 'home#index'
+  root 'home#index'
+  get '*path', constraints: lambda {|r| r.subdomain.present? && r.path.present? }, to: 'home#index'
 end

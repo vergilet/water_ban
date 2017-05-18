@@ -5,7 +5,7 @@ PATH
       active_model_serializers (~> 0.8.3)
       deface
       rails (~> 5.1.1)
-      responders
+      responders (~> 2.1)
 
 PATH
   remote: components/core
@@ -214,6 +214,7 @@ DEPENDENCIES
   pg
   puma (~> 3.7)
   rails (~> 5.1.1)
+  responders
   sass-rails (~> 5.0)
   selenium-webdriver
   spring
