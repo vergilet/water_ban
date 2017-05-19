@@ -1,13 +1,19 @@
 class WaterBan::Api::V1::AddressesController < WaterBan::Api::ApplicationController
+  rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
+
   def index
-    render json: {}
+    @addresses = WaterBan::Addresses::Address.all.reverse
+    respond_with @addresses
   end
 
   def show
-    render json: {}
+    @address = WaterBan::Addresses::Address.find(params[:id])
+    respond_with @address
   end
 
-  def create
-    render json: {}
+  private
+
+  def record_not_found
+    render json: {}, status: 404
   end
 end
