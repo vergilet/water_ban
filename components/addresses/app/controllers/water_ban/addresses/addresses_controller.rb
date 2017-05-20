@@ -4,7 +4,7 @@ module WaterBan::Addresses
     helper_method :address, :addresses
 
     def index
-      render plain: '¯\_(ツ)_/¯'
+      render :index
     end
 
     def new
