@@ -1,0 +1,4 @@
+http.cors.enabled: true
+http.cors.allow-origin: /https?:\/\/localhost(:[0-9]+)?/
+path.data: /usr/local/var/elasticsearch/
+path.logs: /usr/local/var/log/elasticsearch/

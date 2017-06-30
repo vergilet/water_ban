@@ -6,6 +6,10 @@ module WaterBan
       respond_to :json
       before_action :ensure_json_request
 
+      def index
+        puts 'here i am'
+      end
+
       def ensure_json_request
         render(nothing: true, status: 406) unless request.format == :json
       end

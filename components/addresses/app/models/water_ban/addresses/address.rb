@@ -1,6 +1,9 @@
 module WaterBan::Addresses
   class Address < ApplicationRecord
-    default_scope -> { order(created_at: :asc) }
-    validates :name, presence: true
+    include AddressIndexer
   end
 end
+
+# WaterBan::Addresses::Address.__elasticsearch__.client = Elasticsearch::Client.new host: 'http://0.0.0.0:9200'
+# WaterBan::Addresses::Address.__elasticsearch__.create_index! force: true
+# WaterBan::Addresses::Address.import batch_size: 5000

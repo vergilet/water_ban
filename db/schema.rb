@@ -10,17 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170519215322) do
+ActiveRecord::Schema.define(version: 20170616213311) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-  enable_extension "uuid-ossp"
   enable_extension "pgcrypto"
+  enable_extension "uuid-ossp"
 
   create_table "water_ban_addresses_addresses", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "state"
+    t.string "district"
+    t.string "city"
+    t.string "street_name"
+    t.string "street_number"
+    t.string "index_number"
+    t.index ["city"], name: "index_water_ban_addresses_addresses_on_city"
+    t.index ["district"], name: "index_water_ban_addresses_addresses_on_district"
+    t.index ["index_number"], name: "index_water_ban_addresses_addresses_on_index_number"
+    t.index ["state"], name: "index_water_ban_addresses_addresses_on_state"
+    t.index ["street_name"], name: "index_water_ban_addresses_addresses_on_street_name"
+    t.index ["street_number"], name: "index_water_ban_addresses_addresses_on_street_number"
   end
 
 end

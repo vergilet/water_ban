@@ -1,0 +1,15 @@
+html
+  head
+    title= 'Test'
+    link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css' rel='stylesheet' /
+    link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' rel='stylesheet' /
+    link href='https://cdn.rawgit.com/carlosrocha/react-data-components/master/css/table-twbs.css' rel='stylesheet' /
+    link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500' rel='stylesheet' /
+    link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet' /
+
+    = stylesheet_link_tag 'water_ban/addresses/application', media: 'all'
+    = javascript_include_tag 'water_ban/addresses/application'
+    = stylesheet_pack_tag 'application'
+    = javascript_pack_tag 'application'
+  body
+    = yield

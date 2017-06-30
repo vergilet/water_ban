@@ -18,6 +18,11 @@ Gem::Specification.new do |s|
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "~> 5.1.1"
-
   s.add_dependency "deface"
+  s.add_dependency "responders"
+
+  s.add_dependency 'elasticsearch-rails'
+  s.add_dependency 'elasticsearch-model'
+
+  # s.add_dependency 'searchkick'
 end

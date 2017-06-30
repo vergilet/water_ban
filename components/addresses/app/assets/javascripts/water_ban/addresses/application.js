@@ -11,3 +11,5 @@
 // about supported directives.
 //
 //= require_tree .
+
+console.log('Hello World from external js');

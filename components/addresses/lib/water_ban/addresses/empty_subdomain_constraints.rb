@@ -7,7 +7,7 @@ module WaterBan
       # end
 
       def matches?(req)
-        req.subdomains.blank?
+        req.subdomains.blank? || req.subdomain == 'www'
       end
     end
   end
