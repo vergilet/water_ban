@@ -28,4 +28,4 @@ psql water_ban_development
 
 
 drop extension pgcrypto;
-CREATE EXTENSION pgcrypto;
+CREATE EXTENSION pgcrypto;# water_ban
